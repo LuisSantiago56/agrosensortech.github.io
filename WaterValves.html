@@ -11,12 +11,22 @@
             $(".valve1").click(function(){
                 var val1 = $(this).attr('id');
                 $.get("http://10.31.14.204/",{pin:val1});
+                
+            });
+            $(".valve2").click(function(){
                 var val2 = $(this).attr('id');
                 $.get("http://10.31.14.204/",{pin:val2});
+                
+            });
+            $(".valve3").click(function(){
                 var val3 = $(this).attr('id');
                 $.get("http://10.31.14.204/",{pin:val3});
+                
+            });
+            $(".valve2").click(function(){
                 var val4 = $(this).attr('id');
                 $.get("http://10.31.14.204/",{pin:val4});
+                
             });
         });
     </script>
