@@ -1,10 +1,25 @@
 <html><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="jquery-1.11.0.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="ValvesStyles.css" rel="stylesheet" type="text/css">
+    <script>
+        $(document).on("ready",function(){
+            $(".valve1").click(function(){
+                var val1 = $(this).attr('id');
+                $.get("http://10.31.14.204/",{pin:val1});
+                var val2 = $(this).attr('id');
+                $.get("http://10.31.14.204/",{pin:val2});
+                var val3 = $(this).attr('id');
+                $.get("http://10.31.14.204/",{pin:val3});
+                var val4 = $(this).attr('id');
+                $.get("http://10.31.14.204/",{pin:val4});
+            });
+        });
+    </script>
   </head><body>
     <div class="navbar navbar-default navbar-inverse navbar-static-top">
       <div class="container">
@@ -55,26 +70,26 @@
           <div class="col-md-3">
             <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
             <h2>Valve #1</h2>
-                <input type="radio" name="valve1" value="ON" >Turn On<br><br>
-                <input type="radio" name="valve1" valve="OFF" >Turn Off<br><br>
+                <input type="radio" id="1" class="valve1" value="ON" >Turn On<br><br>
+                <input type="radio" id="0"class="valve1" valve="OFF" >Turn Off<br><br>
           </div>
           <div class="col-md-3">
             <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
             <h2>Valve #2</h2>
-                <input type="radio" name="valve2" value="ON" >Turn On<br><br>
-                <input type="radio" name="valve2" valve="OFF" >Turn Off<br><br>
+                <input type="radio" id="1" class="valve2" value="ON" >Turn On<br><br>
+                <input type="radio" id="0" class="valve2" valve="OFF" >Turn Off<br><br>
           </div>
           <div class="col-md-3">
             <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive img-rounded">
             <h2>Valve #3</h2>
-                <input type="radio" name="valve3" value="ON" >Turn On<br><br>
-                <input type="radio" name="valve3" valve="OFF" >Turn Off<br><br>
+                <input type="radio" id="1" class="valve3" value="ON" >Turn On<br><br>
+                <input type="radio" id="0" class="valve3" valve="OFF" >Turn Off<br><br>
           </div>
           <div class="col-md-3">
             <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
             <h2>Valve #4</h2>
-                <input type="radio" name="valve4" value="ON" >Turn On<br><br>
-                <input type="radio" name="valve4" valve="OFF" >Turn Off<br><br>
+                <input type="radio" id="1" class="valve4" value="ON" >Turn On<br><br>
+                <input type="radio" id="0" class="valve4" valve="OFF" >Turn Off<br><br>
           </div>
         </div>
       </div>
