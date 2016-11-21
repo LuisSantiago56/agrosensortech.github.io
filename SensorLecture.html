@@ -1,13 +1,16 @@
-<html><head>
+<html>
+  
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="jquery-1.11.0.js"></script>
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css"
+    rel="stylesheet" type="text/css">
     <link href="SensorStyle.css" rel="stylesheet" type="text/css">
     <script>
-        $(document).on("ready",function(){
+      $(document).on("ready",function(){
            $(".sensor1").click(function(){
                 var lectura = $(this).attr('id');
                 $.get("http://10.31.14.204/",{pin:lectura}, function(data){
@@ -29,7 +32,9 @@
             
         });
     </script>
-  </head><body>
+  </head>
+  
+  <body>
     <div class="navbar navbar-default navbar-inverse navbar-static-top">
       <div class="container">
         <div class="navbar-header">
@@ -50,7 +55,8 @@
               <a href="#">ContactUs</a>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <i class="fa fa-caret-down"></i></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+              aria-expanded="false">Dropdown <i class="fa fa-caret-down"></i></a>
               <ul class="dropdown-menu" role="menu">
                 <li>
                   <a href="SensorLecture.html">Read Sensor Lectures</a>
@@ -73,32 +79,42 @@
         </div>
       </div>
     </div>
-    <div class="section">
+    <div class="section" align="center">
       <div class="container">
         <div class="row">
+          <div class="col-md-12">
+            <img src="soil.png" class="img-responsive">
+          </div>
+        </div>
+        <div class="row">
           <div class="col-md-3">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
             <h2>Sensor #1</h2>
-                <button type="button" id="10" class="sensor1" name="sen1" value="On">Read</button><br><br>
+            <button type="button" id="10" class="sensor1" name="sen1"
+            value="On">Read</button>
+            <br>
+            <br>
           </div>
           <div class="col-md-3">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
             <h2>Sensor #2</h2>
-                <button type="button" id="11" class="sensor2" name="sen2">Read</button><br><br>
+            <button type="button" id="11" class="sensor2" name="sen2">Read</button>
+            <br>
+            <br>
           </div>
           <div class="col-md-3">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive img-rounded">
             <h2>Sensor #3</h2>
-                <button type="button" id="12" class="sensor3" name="sen3">Read</button><br><br>
+            <button type="button" id="12" class="sensor3" name="sen3">Read</button>
+            <br>
+            <br>
           </div>
           <div class="col-md-3">
-            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
             <h2>Sensor #4</h2>
-                <button type="button" id="13" class="sensor4" name="sen4">Read</button><br><br>
+            <button type="button" id="13" class="sensor4" name="sen4">Read</button>
+            <br>
+            <br>
           </div>
         </div>
       </div>
     </div>
+  </body>
 
-
-</body></html>
+</html>
