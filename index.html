@@ -5,6 +5,15 @@
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="agrostyle.css" rel="stylesheet" type="text/css">
+    <script>
+        $(document).on("ready",function(){
+            $(".sensor").click(function(){
+                var lecture = $(this).attr('id');
+                $.get("http://10.31.68.108/",{pin:lecture});
+            });
+            //$.get("http://10.31.14.204/",{pin:valulas}); Modulo Luis
+        });
+    </script>
   </head><body>
     <div class="navbar navbar-default navbar-inverse navbar-static-top">
       <div class="container">
@@ -46,7 +55,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 text-center">
-            <a href="SensorLecture.html"><img src="download.png" class="img-responsive img-thumbnail" style="width:304px;height:210px"></a>
+            <a href="SensorLecture.html" id=9 class=sensor><img src="download.png" class="img-responsive img-thumbnail" style="width:304px;height:210px"></a>
             <h2>Read Sensor Lectures</h2>
             <p>Here you can acces the real time sensor's lectures and see how your garde's
               soil is doing.</p>
