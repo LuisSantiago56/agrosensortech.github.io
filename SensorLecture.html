@@ -6,7 +6,31 @@
     <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="SensorStyle.css" rel="stylesheet" type="text/css">
-    
+    <script>
+        $(document).on("ready",function(){
+            $(".sensor1").click(function(){
+                var valulas = $(this).attr('id');
+                $.get("http://10.31.68.108/", function(Sensor1){alert("Sensor 1: " + Sensor1);});
+                //$.get("http://10.31.68.108/",{pin:valulas});
+            });
+            $(".sensor2").click(function(){
+                var valulas = $(this).attr('id');
+                $.get("http://10.31.68.108/", function(Sensor2){alert("Sensor 2: " + Sensor2);});
+                //$.get("http://10.31.68.108/",{pin:valulas});
+            });
+            $(".sensor3").click(function(){
+                var valulas = $(this).attr('id');
+                $.get("http://10.31.68.108/", function(Sensor3){alert("Sensor 3: " + Sensor3);});
+                //$.get("http://10.31.68.108/",{pin:valulas});
+            });
+            $(".sensor4").click(function(){
+                var valulas = $(this).attr('id');
+                $.get("http://10.31.68.108/", function(Sensor4){alert("Sensor 4: " + Sensor4);});
+                //$.get("http://10.31.68.108/",{pin:valulas});
+            });
+            
+        });
+    </script>
   </head><body>
     <div class="navbar navbar-default navbar-inverse navbar-static-top">
       <div class="container">
@@ -47,15 +71,37 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h1>Sensor Lectures</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisici eli.</p>
-            <br>
-            <br>
-            <a class="btn btn-lg btn-default">Click me</a>
+            <h1>Sensor Lectures</h1><br><br>
           </div>
         </div>
       </div>
     </div>
-  
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
+            <h2>Sensor #1</h2>
+                <button type="radio" id="1" class="valve1" name="val1" value="ON" >Turn On<br><br>
+          </div>
+          <div class="col-md-3">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
+            <h2>Sensor #2</h2>
+                <button type="radio" id="3" class="valve2" name="val2" value="ON" >Turn On<br><br>
+          </div>
+          <div class="col-md-3">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive img-rounded">
+            <h2>Sensor #3</h2>
+                <button type="radio" id="5" class="valve3" name="val3" value="ON" >Turn On<br><br>
+          </div>
+          <div class="col-md-3">
+            <img src="http://pingendo.github.io/pingendo-bootstrap/assets/placeholder.png" class="img-responsive">
+            <h2>Sensor #4</h2>
+                <button type="radio" id="7" class="valve4" name="val4" value="ON" >Turn On<br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </body></html>
