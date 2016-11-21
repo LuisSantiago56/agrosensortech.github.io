@@ -10,7 +10,8 @@
         $(document).on("ready",function(){
            $(".sensor1").click(function(){
                 var lectura = $(this).attr('id');
-                $.get("http://10.31.14.204/",{pin:lectura});
+                $.get("http://10.31.14.204/",{pin:lectura}, function(data){
+  alert("Data: " + data););
             });
             $(".sensor2").click(function(){
                 var lectura = $(this).attr('id');
