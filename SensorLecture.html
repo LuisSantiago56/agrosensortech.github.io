@@ -18,11 +18,11 @@
             });
             $(".sensor2").click(function(){
                 var lectura = $(this).attr('id');
-                $.get("http://10.31.38.7510.31.38.7510.31.38.75/",{pin:lectura});
+                $.get("http://10.31.38.75/",{pin:lectura});
             });
             $(".sensor3").click(function(){
                 var lectura = $(this).attr('id');
-                $.get("http://10.31.38.7510.31.38.75/",{pin:lectura});
+                $.get("http://10.31.38.75/",{pin:lectura});
             });
             $(".sensor4").click(function(){
                 var lectura = $(this).attr('id');
@@ -86,26 +86,26 @@
         <div class="row">
           <div class="col-md-3">
             <h2>Sensor #1</h2>
-            <button type="button" id="10" class="sensor1" name="sen1"
-            value="On">Read</button>
+            <input type="button" id="10" class="sensor1" name="sen1"
+            value="On">Read
             <br>
             <br>
           </div>
           <div class="col-md-3">
             <h2>Sensor #2</h2>
-            <button type="button" id="11" class="sensor2" name="sen2">Read</button>
+            <input type="button" id="11" class="sensor2" name="sen2">Read
             <br>
             <br>
           </div>
           <div class="col-md-3">
             <h2>Sensor #3</h2>
-            <button type="button" id="12" class="sensor3" name="sen3">Read</button>
+            <input type="button" id="12" class="sensor3" name="sen3">Read
             <br>
             <br>
           </div>
           <div class="col-md-3">
             <h2>Sensor #4</h2>
-            <button type="button" id="13" class="sensor4" name="sen4">Read</button>
+            <input type="button" id="13" class="sensor4" name="sen4">Read
             <br>
             <br>
           </div>
